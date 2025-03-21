@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.flex-contenido {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1; 
+    filter: brightness(0.6) blur(3px);
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+img#logo {
+    max-width: 150px;
+    display: block;
+    margin: auto;
+    padding: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    float: left;
+    margin: 0 15px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    background-color: #555;
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 240px;
+    z-index: 10;
+}
+
+nav li ul li {
+    float: none;
+}
+
+nav li:hover>ul {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+
+img#intalaciones-img {
+    width: 50%;
+    float: right;
+    border-radius: 10px;
+}
+
+section.seccion-principal h1 {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+section.seccion-principal h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+section.seccion-principal p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+section.seccion-principal ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+section.seccion-principal ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.reservas-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.opcion {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    border: 2px solid #33333340;
+    border-radius: 10px;
+}
+.opciones-content {
+    padding: 0 30px;
+}
+.opcion a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.reservas-opcion-img {
+    width: 100%;
+    height: 480px;
+    border-radius: 10px 10px 0 0;
+}
+
+.opcion h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.opcion {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.opcion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #007BFF; /* Cambiado a azul */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF; /* Cambiado a azul */
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro para el hover */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el texto introductorio */
+.seccion-principal p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Estilos para las listas */
+.seccion-principal ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.seccion-principal ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Estilos para los encabezados */
+.seccion-principal h1 {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.seccion-principal h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.instalaciones-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.instalacion {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    border: 2px solid #33333340;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.instalacion img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.instalacion h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.instalacion p {
+    padding: 0 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.instalacion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.actividades-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.actividad {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    border: 2px solid #33333340;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.actividad img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.actividad h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.actividad p {
+    padding: 0 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.actividad:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
